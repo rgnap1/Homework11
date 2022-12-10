@@ -16,9 +16,6 @@ public class Main {
         printDistanceDay(95);
         System.out.println("Потребуется " + printDeliveryDistanceDay(95) + " дней доставки");
 
-
-
-
     }
 
     private static int printLeapYearResult ( int year ){
