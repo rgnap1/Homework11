@@ -11,6 +11,12 @@ public class Main {
         int currentYear = LocalDate.now().getYear();
         printOS(numberOS,currentYear);
 
+        System.out.println(" task 3");
+        int deliveryDistance = 95;
+        printDistanceDay(95);
+        System.out.println("Потребуется " + printDeliveryDistanceDay(95) + " дней доставки");
+
+
 
 
     }
@@ -38,6 +44,26 @@ public class Main {
         }
         return number;
      }
+
+    private static int printDistanceDay (int distanceInDay){
+        if (distanceInDay <= 20){
+            System.out.println("Потребуется 1 день доставки");
+        } else if(distanceInDay < 60) {
+            System.out.println("Потребуется 2 дня доставки");
+        }else if (distanceInDay == 60 || distanceInDay <=100){
+            System.out.println("Потребуется 3 дня доставки");
+        }else{
+            System.out.println("Введите расстояние в пределах радиуса доставки");
+        }
+        return distanceInDay;
+
+        //Можем использовать в случае,когда уверены, что радиус доставки ограничен и не превышает расстояние 100 км. В ином случае используем метод ниже.
+    }
+
+    private static int printDeliveryDistanceDay (int deliveryDistance ){
+        return  1+((deliveryDistance+20)/40);
+    }
+
 
 
 }
